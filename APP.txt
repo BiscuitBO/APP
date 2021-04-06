@@ -1,0 +1,56 @@
+<！DOCTYPE html >
+< html >
+    <頭>
+        <！-配置開始：請自定義以下配置->
+        < title >誌冠股份有限公司</ title >
+        <！-配置結束->
+        < meta  charset =“ UTF-8 ” >
+        < meta  name =“ viewport ” content =“ width = device-width，initial-scale = 1.0 ” >
+        <鏈路 HREF ='的style.css '相對='樣式'類型='文本/ CSS '/>
+        <腳本 類型=“ text / javascript ” src =“ cordova.js ” > </腳本>
+    </頭>
+    <身體>
+        < div  id =“ content ” >
+            < div  class =“ content-container ” >
+                < img  src =“ spin.svg ” />
+                < div >
+                    <！-配置開始：請自定義以下配置->
+                    < h1 >商品</ h1 >
+                    < div  class =“ description ” > < span >我不是在實驗室< br就是在前往實驗室的路上</ span > </ div >
+                    <！-配置結束->
+                </ div >
+            </ div >
+        </ div >
+        < div  class =“ footer ” id =“ footer ” >
+< div  class =“容器clearfix ” >
+< p >
+< span  class =“ blog-copyright ” >
+    <！-配置開始：請自定義以下配置->
+    ©版權所有2017 <一個 HREF =“ https://sites.google.com/view/79495194 ” >布丁布丁吃什麼？</一>
+    <！-配置結束->
+</ span >
+</ p >
+</ div >
+</ div >
+        <腳本 類型=“ text / javascript ” >
+                //設備API可用
+                函數 onDeviceReady （） {
+                    如果 （歷史記錄。長度 >  1 ） {
+                        導航器。應用程式。exitApp （）;
+                        回報;
+                    }
+                    
+                    //alert(navigator.network.connection.type）;
+                    if  （導航器。網絡。連接。類型 === 連接。無） {
+                        //location.replace("offline.html“）;
+                        位置。href  =  “ offline.html” ;
+                    } 其他 {
+                        // <！-配置開始：請自定義以下配置->
+                        位置。替換（“ http://blog.pulipuli.info/” ）;
+                        // <！-配置結束->
+                    }
+                }
+                文件。addEventListener （“ deviceready” ， onDeviceReady ， false ）;
+        </腳本>
+    </ body >
+</ html >
